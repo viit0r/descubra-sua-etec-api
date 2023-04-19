@@ -16,7 +16,11 @@ public class Curso {
 
     private String descricao;
 
-    private String tipo;
+    @Column(name = "eixo_tecnologico")
+    private String eixoTecnologico;
+
+    @Column(name = "mercado_trabalho")
+    private String mercadoTrabalho;
 
     @Column(nullable = false)
     private String link;

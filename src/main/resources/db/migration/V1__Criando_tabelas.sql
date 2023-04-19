@@ -1,8 +1,9 @@
 CREATE TABLE IF NOT EXISTS `curso` (
     `id_curso` int NOT NULL UNIQUE AUTO_INCREMENT,
     `nome` varchar(255) NOT NULL,
-    `descricao` varchar (255),
-    `tipo` varchar(255),
+    `descricao` varchar(3000),
+    `eixo_tecnologico` varchar(255),
+    `mercado_trabalho` varchar(3000),
     `link` varchar(255) NOT NULL,
     PRIMARY KEY (`id_curso`)
 );
