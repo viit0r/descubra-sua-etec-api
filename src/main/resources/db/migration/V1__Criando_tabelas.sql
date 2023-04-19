@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `unidade` (
   FOREIGN KEY (`id_endereco`) REFERENCES unidade_endereco(`id_endereco`)
 );
 
-CREATE TABLE IF NOT EXISTS `relacao_unidade_endereco` (
+CREATE TABLE IF NOT EXISTS `relacao_unidade_curso` (
     `id_relacao` int NOT NULL UNIQUE AUTO_INCREMENT,
     `id_unidade` int NOT NULL,
     `id_curso` int NOT NULL,
