@@ -16,11 +16,14 @@ public class Curso {
 
     private String descricao;
 
+    @Column(name = "carga_horaria")
+    private int cargaHoraria;
+
+    @Column(name = "duracao_semestre")
+    private int duracaoSemestre;
+
     @Column(name = "eixo_tecnologico")
     private String eixoTecnologico;
-
-    @Column(name = "mercado_trabalho")
-    private String mercadoTrabalho;
 
     @Column(nullable = false)
     private String link;

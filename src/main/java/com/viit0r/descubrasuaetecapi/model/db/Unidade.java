@@ -18,8 +18,6 @@ public class Unidade {
     @Column(nullable = false)
     private String nome;
 
-    private Boolean etim;
-
     @Column(nullable = false)
     private String site;
 

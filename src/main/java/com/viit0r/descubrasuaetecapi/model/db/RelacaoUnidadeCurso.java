@@ -18,4 +18,10 @@ public class RelacaoUnidadeCurso {
     @OneToOne
     @JoinColumn(name = "id_curso", nullable = false)
     private Curso idCurso;
+
+    @Column(length = 1)
+    private boolean etim;
+
+    @Column(name = "online", length = 1)
+    private boolean modalidadeOnline;
 }
