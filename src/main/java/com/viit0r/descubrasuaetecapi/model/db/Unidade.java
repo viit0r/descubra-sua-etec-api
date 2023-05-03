@@ -18,6 +18,9 @@ public class Unidade {
     @Column(nullable = false)
     private String nome;
 
+    @Column(length = 800)
+    private String descricao;
+
     @Column(nullable = false)
     private String site;
 

@@ -14,6 +14,7 @@ public class Curso {
     @Column(nullable = false)
     private String nome;
 
+    @Column
     private String descricao;
 
     @Column(name = "carga_horaria")
@@ -27,4 +28,7 @@ public class Curso {
 
     @Column(nullable = false)
     private String link;
+
+    @Column
+    private String preRequisitos;
 }

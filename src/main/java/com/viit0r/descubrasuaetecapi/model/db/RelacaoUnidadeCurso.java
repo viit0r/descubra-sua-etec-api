@@ -19,9 +19,18 @@ public class RelacaoUnidadeCurso {
     @JoinColumn(name = "id_curso", nullable = false)
     private Curso idCurso;
 
-    @Column(length = 1)
-    private boolean etim;
+    @Column(name = "presencial", length = 1)
+    private boolean modalidadePresencial;
+
+    @Column(name = "semipresencial", length = 1)
+    private boolean modalidadeSemipresencial;
 
     @Column(name = "online", length = 1)
     private boolean modalidadeOnline;
+
+    @Column(name = "etim", length = 1)
+    private boolean modalidadeEtim;
+
+    @Column(name = "especializacao", length = 1)
+    private boolean modalidadeEspecializacao;
 }

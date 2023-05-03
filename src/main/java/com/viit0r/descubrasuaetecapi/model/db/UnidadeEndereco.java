@@ -20,6 +20,9 @@ public class UnidadeEndereco {
     @Column(nullable = false, length = 10)
     private String numero;
 
+    @Column(length = 50)
+    private String complemento;
+
     @Column(nullable = false)
     private String bairro;
 
