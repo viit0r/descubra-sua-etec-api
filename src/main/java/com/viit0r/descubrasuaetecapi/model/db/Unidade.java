@@ -21,9 +21,12 @@ public class Unidade {
     @Column(length = 800)
     private String descricao;
 
+    @Column(length = 30)
+    private String telefone;
+
     @Column(nullable = false)
     private String site;
 
-    @Column(length = 11)
-    private String telefone;
+    @Column(length = 25)
+    private String email;
 }

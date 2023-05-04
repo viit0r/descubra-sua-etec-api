@@ -28,8 +28,9 @@ CREATE TABLE IF NOT EXISTS `unidade` (
   `id_endereco` bigint NOT NULL,
   `nome` varchar(255) NOT NULL,
   `descricao` varchar(800),
+  `telefone` varchar(30),
   `site` varchar(255) NOT NULL,
-  `telefone` char(11),
+  `email` varchar(25),
   PRIMARY KEY (`id_unidade`),
   FOREIGN KEY (`id_endereco`) REFERENCES unidade_endereco(`id_endereco`)
 );
