@@ -152,7 +152,7 @@ INSERT INTO unidade (id_endereco, nome, descricao, telefone, site, email)
 VALUES (
 19,
 "Etec Guaracy Silveira",
-"A Etec Guaracy Silveira é uma tradicional escola técnica paulista e a única na região de Pinheiros. Foi criada em 1950 recebendo o nome de Escola Industrial de Pinheiros. Posteriormente em 1970 Ginásio Industrial Estadual Guaracy Silveira, em 1978, Escola Estadual de 2º Grau Guaracy Silveira, em 1981, Escola Técnica de 2º Grau Guaracy Silveira, sempre pertencendo a rede estadual de ensino da Secretaria da Educação. Em 1992 passou para a Secretaria da Ciência, Tecnologia e Desenvolvimento Econômico e em 1993 foi incorporada pelo Centro Paula Souza sob o nome de Etec Guaracy Silveira."
+"A Etec Guaracy Silveira é uma tradicional escola técnica paulista e a única na região de Pinheiros. Foi criada em 1950 recebendo o nome de Escola Industrial de Pinheiros. Posteriormente em 1970 Ginásio Industrial Estadual Guaracy Silveira, em 1978, Escola Estadual de 2º Grau Guaracy Silveira, em 1981, Escola Técnica de 2º Grau Guaracy Silveira, sempre pertencendo a rede estadual de ensino da Secretaria da Educação. Em 1992 passou para a Secretaria da Ciência, Tecnologia e Desenvolvimento Econômico e em 1993 foi incorporada pelo Centro Paula Souza sob o nome de Etec Guaracy Silveira.",
 "1130316208",
 "https://www.cps.sp.gov.br/etecs/etec-guaracy-silveira-pinheiros/",
 "e061dir@cps.sp.gov.br");
@@ -354,7 +354,7 @@ VALUES (
 "https://www.cps.sp.gov.br/etecs/etec-uirapuru-uirapuru/",
 "e230dir@cps.sp.gov.br");
 
-INSERT INTO unidade (id_endereco, nome, telefone, site, email)
+INSERT INTO unidade (id_endereco, nome, descricao, telefone, site, email)
 VALUES (
 44,
 "Etec Zona Leste",
