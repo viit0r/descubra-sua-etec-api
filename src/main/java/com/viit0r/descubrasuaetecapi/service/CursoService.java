@@ -3,6 +3,7 @@ package com.viit0r.descubrasuaetecapi.service;
 import com.viit0r.descubrasuaetecapi.exception.exceptions.NaoEncontradoException;
 import com.viit0r.descubrasuaetecapi.model.db.Curso;
 import com.viit0r.descubrasuaetecapi.model.dto.CursoDTO;
+import com.viit0r.descubrasuaetecapi.model.request.FiltroRequest;
 import com.viit0r.descubrasuaetecapi.model.response.curso.CursoResponse;
 import com.viit0r.descubrasuaetecapi.repository.CursoRepository;
 import com.viit0r.descubrasuaetecapi.util.Util;
@@ -35,5 +36,17 @@ public class CursoService {
         CursoDTO cursoRetorno = new CursoDTO(curso);
 
         return new CursoResponse(cursoRetorno, Util.CODIGO_REQUISICAO_OK, true);
+    }
+
+    public CursoResponse getCursosByFiltro(FiltroRequest filtroRequest) {
+        List<Curso> cursos = cursoRepository.findByNomeContainingIgnoreCase(filtroRequest.getFiltro());
+
+        if (cursos.isEmpty()) {
+            throw new NaoEncontradoException("Não foram encontrados registros de curso.", Util.CODIGO_ERRO_CURSO_NAO_ENCONTRADO);
+        }
+
+        List<CursoDTO> cursosRetorno = cursos.stream().map(CursoDTO::new).toList();
+
+        return new CursoResponse(cursosRetorno, Util.CODIGO_REQUISICAO_OK, true);
     }
 }
