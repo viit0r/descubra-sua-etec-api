@@ -1,7 +1,7 @@
 package com.viit0r.descubrasuaetecapi.controller;
 
 import com.viit0r.descubrasuaetecapi.model.request.FiltroRequest;
-import com.viit0r.descubrasuaetecapi.model.response.curso.CursoResponse;
+import com.viit0r.descubrasuaetecapi.model.response.CursoResponse;
 import com.viit0r.descubrasuaetecapi.service.CursoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

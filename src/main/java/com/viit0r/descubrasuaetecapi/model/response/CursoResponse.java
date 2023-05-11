@@ -1,4 +1,4 @@
-package com.viit0r.descubrasuaetecapi.model.response.curso;
+package com.viit0r.descubrasuaetecapi.model.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.viit0r.descubrasuaetecapi.model.dto.CursoDTO;

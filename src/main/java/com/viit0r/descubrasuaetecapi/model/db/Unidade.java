@@ -1,9 +1,15 @@
 package com.viit0r.descubrasuaetecapi.model.db;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name="unidade")
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class Unidade {
 
     @Id

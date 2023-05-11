@@ -4,7 +4,7 @@ import com.viit0r.descubrasuaetecapi.exception.exceptions.NaoEncontradoException
 import com.viit0r.descubrasuaetecapi.model.db.Curso;
 import com.viit0r.descubrasuaetecapi.model.dto.CursoDTO;
 import com.viit0r.descubrasuaetecapi.model.request.FiltroRequest;
-import com.viit0r.descubrasuaetecapi.model.response.curso.CursoResponse;
+import com.viit0r.descubrasuaetecapi.model.response.CursoResponse;
 import com.viit0r.descubrasuaetecapi.repository.CursoRepository;
 import com.viit0r.descubrasuaetecapi.util.Util;
 import org.springframework.beans.factory.annotation.Autowired;
