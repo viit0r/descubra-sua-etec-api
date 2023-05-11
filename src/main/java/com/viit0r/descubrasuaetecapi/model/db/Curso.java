@@ -1,9 +1,15 @@
 package com.viit0r.descubrasuaetecapi.model.db;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "curso")
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class Curso {
 
     @Id
@@ -18,10 +24,10 @@ public class Curso {
     private String descricao;
 
     @Column(name = "carga_horaria")
-    private int cargaHoraria;
+    private Integer cargaHoraria;
 
     @Column(name = "duracao_semestre")
-    private int duracaoSemestre;
+    private Integer duracaoSemestre;
 
     @Column(name = "eixo_tecnologico")
     private String eixoTecnologico;
@@ -29,6 +35,6 @@ public class Curso {
     @Column(nullable = false)
     private String link;
 
-    @Column
+    @Column(name = "pre_requisitos")
     private String preRequisitos;
 }
