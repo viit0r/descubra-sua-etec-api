@@ -3,10 +3,12 @@ package com.viit0r.descubrasuaetecapi.model.dto;
 import com.viit0r.descubrasuaetecapi.model.db.Unidade;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class UnidadeDTO {
 
-    public UnidadeDTO(Unidade unidade) {
+    private UnidadeDTO(Unidade unidade, List<RelacaoUnidadeDTO> unidadeCursos) {
         this.idUnidade = unidade.getIdUnidade();
         this.nome = unidade.getNome();
         this.descricao = unidade.getDescricao();
@@ -14,6 +16,7 @@ public class UnidadeDTO {
         this.site = unidade.getSite();
         this.email = unidade.getEmail();
         this.unidadeEndereco = new UnidadeEnderecoDTO(unidade.getIdEndereco());
+        this.unidadeCursos = unidadeCursos;
     }
 
     private Long idUnidade;
@@ -29,4 +32,10 @@ public class UnidadeDTO {
     private String email;
 
     private UnidadeEnderecoDTO unidadeEndereco;
+
+    private List<RelacaoUnidadeDTO> unidadeCursos;
+
+    public static UnidadeDTO add(Unidade unidade, List<RelacaoUnidadeDTO> unidadeCursos) {
+        return new UnidadeDTO(unidade, unidadeCursos);
+    }
 }
