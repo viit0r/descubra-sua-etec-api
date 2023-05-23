@@ -29,7 +29,7 @@ public class CursoService {
         List<Curso> cursos = cursoRepository.findAll();
 
         if (cursos.isEmpty()) {
-            throw new NaoEncontradoException("Não foram encontrados registros de curso.", Util.CODIGO_ERRO_CURSO_NAO_ENCONTRADO);
+            throw new NaoEncontradoException("Não foram encontrados registros de curso.", Util.CODIGO_ERRO_NAO_ENCONTRADO);
         }
 
         List<CursoDTO> cursosRetorno = new ArrayList<>();
@@ -45,7 +45,7 @@ public class CursoService {
 
     public CursoResponse getCurso(Long idCurso) {
         Curso curso = cursoRepository.findById(idCurso)
-                .orElseThrow(() -> new NaoEncontradoException(String.format("Não foram encontrados registros de curso com o ID %d.", idCurso), Util.CODIGO_ERRO_CURSO_NAO_ENCONTRADO));
+                .orElseThrow(() -> new NaoEncontradoException(String.format("Não foram encontrados registros de curso com o ID %d.", idCurso), Util.CODIGO_ERRO_NAO_ENCONTRADO));
 
         List<RelacaoCursoDTO> cursoUnidades = getAllUnidadesByCurso(curso);
 
@@ -58,7 +58,7 @@ public class CursoService {
         List<Curso> cursos = cursoRepository.findByNomeContainingIgnoreCase(filtroRequest.getFiltro());
 
         if (cursos.isEmpty()) {
-            throw new NaoEncontradoException("Não foram encontrados registros de curso.", Util.CODIGO_ERRO_CURSO_NAO_ENCONTRADO);
+            throw new NaoEncontradoException("Não foram encontrados registros de curso.", Util.CODIGO_ERRO_NAO_ENCONTRADO);
         }
 
         List<CursoDTO> cursosRetorno = new ArrayList<>();
