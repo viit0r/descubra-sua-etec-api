@@ -1,5 +1,5 @@
 # ---------- STAGE 1: DEPENDENCIES ----------
-FROM maven:3.9.9-eclipse-temurin-17 AS deps
+FROM maven:3.9.9-eclipse-temurin-21 AS deps
 
 WORKDIR /app
 
@@ -9,7 +9,7 @@ RUN mvn -B -q -e -DskipTests dependency:go-offline
 
 
 # ---------- STAGE 2: BUILD ----------
-FROM maven:3.9.9-eclipse-temurin-17 AS build
+FROM maven:3.9.9-eclipse-temurin-21 AS build
 
 WORKDIR /app
 
@@ -21,7 +21,7 @@ RUN mvn clean package -DskipTests
 
 
 # ---------- STAGE 3: RUNTIME ----------
-FROM eclipse-temurin:17-jdk-jammy
+FROM eclipse-temurin:21-jdk-jammy
 
 WORKDIR /app
 
