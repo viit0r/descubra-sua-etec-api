@@ -1,9 +1,12 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/descubra_sua_etec_db
-    username: {USER}
-    password: {PASS}
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${URL}
+    username: ${USER}
+    password: ${PASS}
+    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      dll-auto: none
+      ddl-auto: none
+    show-sql: true
+  flyway:
+    locations: ${MIGRATIONS_PATH}
