@@ -16,23 +16,17 @@ API desenvolvida em Spring para se comunicar ao banco e recuperar informações 
 - [Códigos de retorno](#códigos-de-retorno)
 
 ## Informações importantes
-Para se comunicar com a API, você deverá:
-- Ter o serviço do MySQL instalado e rodando na sua máquina.
-- Efetuar um clone do projeto.
-- Configurar as credenciais do banco de dados (username e password) no arquivo [application.yml](src/main/resources/application.yml).
-- Criar um banco com o nome *descubra_sua_etec_db*.
-- Executar o projeto.
+A URL base para todas as requisições será `https://descubra-sua-etec-api.onrender.com`
 
-Após isso, poderá utilizar alguma ferramenta ou o próprio navegador para testar as requisições. 😉
+Para testes via Swagger, [clique aqui](https://descubra-sua-etec-api.onrender.com/docs) ⬅️
 
-A URL base para todas as requisições será *http://localhost:8080*.
-
+`⚠️ Esta API foi criada para fins de estudo. Seu conteúdo não deve ser utilizado como atual.`
 
 ## Unidades
 ### Buscar todas as unidades
 Efetua a busca e retorna todas as unidades disponíveis na cidade de São Paulo.
 
-GET - [/v1/unidade]
+GET - `/v1/unidade`
 
 **Response status** - 200 OK
 
@@ -87,7 +81,7 @@ GET - [/v1/unidade]
 ### Buscar uma unidade
 Efetua a busca e retorna a unidade com o id especificado no parâmetro.
 
-GET - [/v1/unidade/{id}]
+GET - `/v1/unidade/{id}`
 
 **Response status** - 200 OK
 
@@ -139,7 +133,7 @@ GET - [/v1/unidade/{id}]
 ### Buscar unidades baseado em um filtro
 Efetua a busca e retorna todas as unidades da cidade de São Paulo que possuem o filtro aplicado.
 
-GET - [/v1/unidade]
+GET - `/v1/unidade`
 
 **Request body**
 ```
@@ -203,7 +197,7 @@ GET - [/v1/unidade]
 ### Buscar todos os cursos
 Efetua a busca e retorna todos os cursos disponíveis nas ETECs da cidade de São Paulo.
 
-GET - [/v1/curso]
+GET - `/v1/curso`
 
 **Response status** - 200 OK
 
@@ -258,7 +252,7 @@ GET - [/v1/curso]
 ### Buscar um curso
 Efetua a busca e retorna o curso com o id especificado no parâmetro.
 
-GET - [/v1/curso/{id}]
+GET - `/v1/curso/{id}`
 
 **Response status** - 200 OK
 
@@ -311,7 +305,7 @@ GET - [/v1/curso/{id}]
 ### Buscar cursos baseado em um filtro
 Efetua a busca e retorna todos os cursos da cidade de São Paulo que possuem o filtro aplicado.
 
-GET - [/v1/curso]
+GET - `/v1/curso`
 
 **Request body**
 ```
